@@ -103,7 +103,27 @@ background:#1a5fc1;
 <textarea></textarea>
 
 <button type="submit">Submit</button>
+<script>
 
+async function submitForm(){
+
+const data = {
+day: document.getElementById("day").value,
+target1: document.getElementById("t1").value,
+target2: document.getElementById("t2").value,
+target3: document.getElementById("t3").value
+};
+
+await fetch("PASTE_SCRIPT_URL_HERE",{
+method:"POST",
+body: JSON.stringify(data)
+});
+
+alert("Form submitted");
+
+}
+
+</script>
 </div>
 
 </body>
